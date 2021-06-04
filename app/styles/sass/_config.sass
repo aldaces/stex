@@ -1,0 +1,77 @@
+
+//vars
+$orange: #F89D33
+$blue: #426FA8
+$fontSize: 16px // Body Font Size
+$textColor: #4A4A4A // Text Color
+$headColor: #000 // h2
+$headDescColor: #212121 //h3
+$lineHeight: 1.65 // Document Line Height
+$font: fira, sans-serif // main Font Family
+$systemFont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('fira', normal, 400, '../fonts/FiraSans-Regular.woff2')
+@include font('fira', normal, 500, '../fonts/FiraSans-Medium.woff2')
+@include font('fira', normal, 600, '../fonts/FiraSans-SemiBold.woff2')
+@include font('fira', normal, 700, '../fonts/FiraSans-Bold.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $orange
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $font
+	font-size: $fontSize
+	line-height: $lineHeight
+	color: $textColor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+.bg
+	background-color: #F8F8F8
+	max-width: 100%
+.container
+	max-width: 1600px
+	margin: 0 auto
+h2
+	color: $headColor
+	font-weight: 600
+h3
+	color: $headDescColor
+	font-weight: 500
+a
+	color: $headDescColor
+	text-decoration: none
+	font-weight: 500
