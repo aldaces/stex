@@ -68,10 +68,30 @@ body
 h2
 	color: $headColor
 	font-weight: 600
+	font-size: 2.5em
+	position: relative
+	&:after
+		content: ''
+		height: 2px
+		width: 51px
+		background: $orange
+		position: absolute
+		right: 30%
+		top: 50%
 h3
 	color: $headDescColor
 	font-weight: 500
+	font-size: 1.3em
 a
 	color: $headDescColor
 	text-decoration: none
 	font-weight: 500
+.button
+	border-radius: 3px
+	background: $orange
+	border: 0
+	padding: 8px 23px
+	color: white
+	font-weight: 600
+	font-size: 0.9em
+	transition: .5s ease
