@@ -62,6 +62,8 @@ body
 .bg
 	background-color: #F8F8F8
 	max-width: 100%
+.bg-blue
+	background-color: $blue
 .container
 	max-width: 1600px
 	margin: 0 auto
@@ -95,3 +97,108 @@ a
 	font-weight: 600
 	font-size: 0.9em
 	transition: .5s ease
+
+.block-title
+    h2
+      width: 40%
+      text-align: center
+      &:after
+        transform: rotate(270deg)
+        left: 35%
+        top: 180%
+
+.flip-card
+	width: 420px
+	height: 250px
+	perspective: 1000px
+	margin: 10px
+	cursor: pointer
+	&-inner
+		position: relative
+		width: 100%
+		height: 100%
+		text-align: center
+		transition: transform 0.6s
+		transform-style: preserve-3d
+		background-color: white
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+	&:hover &-inner
+  		transform: rotateY(180deg)
+	&-front, &-back
+  		position: absolute
+  		width: 100%
+  		height: 100%
+  		backface-visibility: hidden
+	&-front
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+  		color: black
+		&-img
+			width: 104px
+			height: 104px
+			background: #F8F8F8
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+	span
+		font-size: 1.1em
+		color: #1F1F1F
+		padding: 0 22px
+		font-weight: 500
+		margin-top: 15px
+		line-height: 27px
+	&-back
+		transform: rotateY(180deg)
+		display: flex
+		justify-content: center
+		align-items: center
+		ul
+			list-style-image: url(../images/dist/check.svg)
+			text-align: left
+			line-height: 28px
+		p
+			text-align: left
+			padding: 30px
+.collapsible
+	background-color: $orange
+	color: white
+	cursor: pointer
+	padding: 5px
+	width: 100%
+	border: none
+	text-align: left
+	outline: none
+	font-size: 1.1em
+	text-transform: uppercase
+	text-align: center
+	border-radius: 3px
+	.active, &:hover
+		filter: brightness(120%)
+	&:after
+		content: url(../images/dist/arrow-white.svg)
+		float: right
+		margin-right: 15px
+.active:after
+	transform: rotate(180deg)
+.content
+	max-height: 0
+	overflow: hidden
+	transition: max-height 0.5s ease-out
+	background-color: #F8F8F8
+label
+	font-size: 1.1em
+	margin-bottom: 10px
+input, select
+	height: 48px
+	background: #FFFFFF
+	border-width: 0
+	margin-right: 20px
+input[type="file"]
+	display: none
+input[type="checkbox"]
+	width: 20px
+select:focus-visible
+	outline: 0

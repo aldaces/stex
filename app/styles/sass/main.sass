@@ -138,14 +138,6 @@
       &:hover
         filter: brightness(120%)
 .office
-  &-title
-    h2
-      width: 40%
-      text-align: center
-      &:after
-        transform: rotate(270deg)
-        left: 35%
-        top: 180%
   &-body
     width: 1460px
     background-color: #F8F8F8
@@ -172,6 +164,7 @@
           cursor: pointer
     &-foot
       display: flex
+      margin-top: 35px
       > div
         width: 40%
         align-self: center
@@ -191,3 +184,198 @@
           left: 0
           top: 0
           background-color: $orange
+    .button:hover
+      filter: brightness(120%)
+.benefits
+  margin: 50px auto
+  .block-title h2
+    width: 52%
+    &:after
+      left: 19%
+  &-body
+    width: 1460px
+    background: #F8F8F8
+    margin: 30px auto
+    padding: 100px 0
+    &-cards
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      
+.career
+  &-header
+    display: flex
+    justify-content: center
+    margin-bottom: 50px
+    &-left
+      width: 40%
+      h2, h3
+        margin-bottom: 25px
+      h2:after
+        display: none
+    &-right
+      width: 35%
+      margin-left: 130px
+      h4
+        font-size: 1.5em
+        font-weight: bold
+        color: #212121
+        margin-bottom: 20px
+      &-item
+        width: 100%
+        height: 90px
+        background: #F8F8F8
+        border: 1px solid #E1E1E1
+        margin-bottom: 20px
+        position: relative
+        transition: right .3 easy
+        a
+          display: block
+          width: 100%
+          height: 100%
+          display: flex
+          justify-content: center
+          flex-direction: column
+        &:before
+          content: ''
+          width: 3px
+          height: 100%
+          position: absolute
+          left: 0
+          top: 0
+          background-color: $orange
+        &:after
+          content: url('../images/dist/arrow-left.svg')
+          position: absolute
+          right: 30px
+          top: 40%
+        &:hover:after
+          right: 40px
+          transition: margin-right .3
+        span
+          display: block
+          padding-left: 30px
+          &:first-child
+            font-size: 1.2em
+            font-weight: 500
+          &:last-child
+            font-size: 0.8
+            color: #656565
+.max
+	width: 80%
+.career-form
+  max-width: 1333px
+  margin: 0 auto
+  .form
+    padding-left: 95px
+    padding-top: 75px
+    &-group
+      display: flex
+      &-item
+        width: 40%
+        display: flex
+        flex-direction: column
+        margin: 20px 0
+      .custom-file-upload
+        background: #F8F8F8
+        border: 1px solid #747474
+        display: inline-block
+        height: 48px
+        margin-bottom: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        img
+          margin-right: 10px
+      .checkbox
+        label
+          margin-bottom: 0
+          align-self: center
+          cursor: pointer
+    hr
+      width: 85%
+    &-footer
+      margin: 30px  0
+      span
+        font-size: 1.3em
+        font-weight: 600
+      &-group
+        display: flex
+        flex-wrap: wrap
+        &-item
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-right: 20px
+          label
+            margin-bottom: 0
+      .button
+        margin: 20px 0
+.contact
+  display: flex
+  justify-content: center
+  margin: 50px auto
+  > div
+    width: 30%
+    align-self: center
+    h2:after
+      left: -70px
+  &-img
+    text-align: center
+    margin-right: 120px
+  h4
+    font-size: 1.2em
+    font-weight: 500
+    color: #929292
+  p
+    line-height: 24px
+    margin: 20px 0
+  &-desc
+    &-links
+      display: flex
+      font-weight: bold
+      margin-bottom: 25px
+      > div
+        margin-right: 20px
+  .button
+    background: $blue
+    position: relative
+    /** &:before
+      content: url(../images/dist/fb.svg)
+      display: inline-block
+      width: 48px
+      position: absolute
+      top: 0
+      left: 0
+      padding: 8px
+      background: $blue **/
+    &:hover
+      filter: brightness(120%)
+
+.footer
+  display: flex
+  align-items: center
+  justify-content: space-around
+  padding: 30px 0
+  &-menu
+    ul
+      list-style: none
+      a
+        color: white
+        font-size: 0.9em
+        &:hover
+          color: $orange
+  &-contacts
+    span
+      display: block
+      margin-bottom: 20px
+      color: white
+      font-size: 0.9em
+      a
+        color: white
+.footer-copy
+  text-align: center
+  border-top: 1px solid #AFBAC5
+  color: #AFBAC5
+  padding: 10px 0
