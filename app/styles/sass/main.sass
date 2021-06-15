@@ -1,4 +1,6 @@
+@import magnific
 @import config
+
 //@import 'blocks/**/*'
 
 .head
@@ -22,10 +24,9 @@
         cursor: pointer
         text-align: center
         font-size: 1.2em
-        a
+        > a
           &:hover
             color: #313131
-            font-weight: bold
           &::after
             content: ""
             position: absolute
@@ -35,7 +36,7 @@
             height: 2px
             background: $orange
             transition: width 0.3s ease-out
-          &:focus:after, &:hover::after
+          &:hover::after
             width: 50px
   &-lang
     .dropdown
@@ -279,13 +280,13 @@
       .custom-file-upload
         background: #F8F8F8
         border: 1px solid #747474
-        display: inline-block
         height: 48px
         margin-bottom: 0
         display: flex
         justify-content: center
         align-items: center
         cursor: pointer
+        width: 97%
         img
           margin-right: 10px
       .checkbox
@@ -310,6 +311,7 @@
           margin-right: 20px
           label
             margin-bottom: 0
+            cursor: pointer
       .button
         margin: 20px 0
 .contact

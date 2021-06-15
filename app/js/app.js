@@ -1,10 +1,23 @@
 // // Import jQuery module (npm i jquery)
-//import $ from 'jquery'
+import $ from 'jquery'
+import magnificPopup from 'magnific-popup'
 //window.jQuery = $
 //window.$ = $
 
 // // Import vendor jQuery plugin example (not module)
-require('~/app/libs/lightzoom/lightzoom.js');
+//require('~/app/libs/lightzoom/lightzoom.js');
+//require('~/app/libs/lightzoom/magnific.js');
+
+
+
+$(document).ready(function(){
+    $(".head-menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 500);
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -22,8 +35,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 })
-$(document).ready(function () {
-    $('.lightzoom').lightzoom({
-        isOverlayClickClosing: true
+$(document).ready(function() {
+    $('.lightzoom').magnificPopup({
+        type:'image',
+        image: {
+            titleSrc: 'title'
+        },
+        gallery:{
+            enabled: true,
+            navigateByImgClick: true
+        },
+        callbacks: {
+            buildControls: function() {
+                this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+            }
+        }
+    });
+});
+$(document).ready(function() {
+    $('.popup-modal').magnificPopup({
+        modal: false
     });
 });

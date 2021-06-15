@@ -98,6 +98,28 @@ a
 	font-size: 0.9em
 	transition: .5s ease
 
+div.sub-menu
+	display: none
+	padding: 5px 0
+	box-shadow: 0 17px 27px rgba(0, 0, 0, 0.14)
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+		text-align: left
+		font-size: 0.9em
+		li
+			padding: 5px 15px
+			&:hover
+				background-color: #F8F8F8
+			a:hover
+				color: #000
+.drop-link:hover div.sub-menu
+	display: block
+	position: absolute
+	width: 160px
+	background-color: white
+
 .block-title
     h2
       width: 40%
@@ -169,7 +191,6 @@ a
 	padding: 5px
 	width: 100%
 	border: none
-	text-align: left
 	outline: none
 	font-size: 1.1em
 	text-transform: uppercase
@@ -181,8 +202,10 @@ a
 		content: url(../images/dist/arrow-white.svg)
 		float: right
 		margin-right: 15px
+		transform: rotate(180deg)
+		transition: .5s ease
 .active:after
-	transform: rotate(180deg)
+	transform: rotate(360deg)
 .content
 	max-height: 0
 	overflow: hidden
@@ -202,3 +225,48 @@ input[type="checkbox"]
 	width: 20px
 select:focus-visible
 	outline: 0
+.mfp-bottom-bar
+	margin-top: -90px
+	background-color: white
+.mfp-title
+	height: 77px
+.mfp-title, .mfp-counter
+	color: #000
+	padding: 20px
+.mfp-arrow
+	opacity: 1
+button.mfp-close, button.mfp-arrow
+	height: 70px !important
+.mfp-arrow-left
+	background: url('../images/dist/gallery-arrow-left.svg') no-Repeat top left !important
+	width: 70px
+	height: 50px
+.mfp-arrow-right
+	background: url('../images/dist/gallery-arrow-right.svg') no-Repeat top right !important
+	width: 70px
+	height: 50px
+.mfp-arrow-left::before,
+.mfp-arrow-right::before
+	display: none
+	content: ''
+.mfp-arrow-left::after,
+.mfp-arrow-right::after
+	display: none
+	content: ''
+.inline-popup
+	position: relative
+	background: #F8F8F8
+	width: auto
+	max-width: 950px
+	margin: 20px auto
+.modal-title
+	height: 85px
+	background: #FFFFFF
+	padding: 24px 45px
+	font-size: 1.6em
+	font-weight: 500
+.modal-body
+	padding: 37px 70px 70px 40px
+	span
+		font-size: 1.3em
+		font-weight: bold
