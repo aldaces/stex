@@ -38,16 +38,17 @@
             transition: width 0.3s ease-out
           &:hover::after
             width: 50px
-  &-lang
+.head-lang
     .dropdown
       position: relative
       display: inline-block
       &:hover .dropdown-content
         display: block
+        z-index: 10
       &-btn
         padding: 5px 25px 0 32px
         cursor: pointer
-        background: url('../images/dist/russia.png') no-repeat left center
+        background: url('../images/dist/england.png') no-repeat left center
         &::after
           background: rgba(0, 0, 0, 0) url("../images/dist/arrow.svg") no-repeat scroll center center
           content: ""
@@ -140,7 +141,6 @@
         filter: brightness(120%)
 .office
   &-body
-    width: 1460px
     background-color: #F8F8F8
     margin: 30px auto
     padding: 80px
@@ -194,7 +194,6 @@
     &:after
       left: 19%
   &-body
-    width: 1460px
     background: #F8F8F8
     margin: 30px auto
     padding: 100px 0
@@ -260,10 +259,8 @@
             font-size: 1.2em
             font-weight: 500
           &:last-child
-            font-size: 0.8
+            font-size: 0.8em
             color: #656565
-.max
-	width: 80%
 .career-form
   max-width: 1333px
   margin: 0 auto
@@ -277,6 +274,12 @@
         display: flex
         flex-direction: column
         margin: 20px 0
+        &:first-child
+          margin-right: 20px
+      &-item-max
+        display: flex
+        flex-direction: column
+        width: 82%
       .custom-file-upload
         background: #F8F8F8
         border: 1px solid #747474
@@ -286,7 +289,6 @@
         justify-content: center
         align-items: center
         cursor: pointer
-        width: 97%
         img
           margin-right: 10px
       .checkbox
@@ -294,6 +296,7 @@
           margin-bottom: 0
           align-self: center
           cursor: pointer
+          margin-left: 10px
     hr
       width: 85%
     &-footer
@@ -312,6 +315,7 @@
           label
             margin-bottom: 0
             cursor: pointer
+            margin-left: 10px
       .button
         margin: 20px 0
 .contact
@@ -360,6 +364,7 @@
   align-items: center
   justify-content: space-around
   padding: 30px 0
+  flex-wrap: wrap
   &-menu
     ul
       list-style: none
@@ -381,3 +386,5 @@
   border-top: 1px solid #AFBAC5
   color: #AFBAC5
   padding: 10px 0
+
+@import media

@@ -2,12 +2,13 @@
 <!--#include virtual="/parts/header.html" -->
 
 <header>
-    <div class="container">
+    <!--<div class="container">
         <nav class="head">
             <div class="head-logo">
                 <img src="images/dist/head-logo.svg" alt="">
             </div>
             <div class="head-menu">
+                <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
                 <ul class="head-menu-list">
                     <li class="head-menu-list-item"><a href="#">Main</a></li>
                     <li class="head-menu-list-item drop-link"><a href="">About us</a>
@@ -18,7 +19,6 @@
                                 <li class="dropdown-menu-item"><a href="#lock">Our location</a></li>
                             </ul>
                         </div>
-
                     </li>
                     <li class="head-menu-list-item"><a href="#office">Our office</a></li>
                     <li class="head-menu-list-item"><a href="#benefit">Benefits of working with STEX</a></li>
@@ -38,7 +38,46 @@
                 </div>
             </div>
         </nav>
-    </div>
+    </div>-->
+    <section class="nav-bar">
+        <div class="container">
+            <div class="head">
+                <div class="brand">
+                    <a href="#"><img src="images/dist/head-logo.svg" alt="logo"></a>
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li><a href="#">Main</a></li>
+                        <li>
+                            <a href="#">About us</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#">STEX in Europe</a></li>
+                                <li><a href="#">STEX Ukraine</a></li>
+                                <li><a href="#">Our location</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Our office</a></li>
+                        <li><a href="#">Benefits of working with STEX</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="head-lang">
+                    <div class="dropdown">
+                        <div class="dropdown-btn">Eng</div>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-link">Rus</a>
+                            <a href="#" class="dropdown-link">Ukr</a>
+                            <a href="#" class="dropdown-link">Deu</a>
+                            <a href="#" class="dropdown-link">Eng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <section class="bg">
         <div class="container">
             <div class="main">
@@ -370,7 +409,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="form-group-item" style="width: 80%;">
+                            <div class="form-group-item-max">
                                 <label for="">Nationality *</label>
                                 <input type="text">
                             </div>

@@ -98,28 +98,55 @@ a
 	font-size: 0.9em
 	transition: .5s ease
 
-div.sub-menu
-	display: none
-	padding: 5px 0
-	box-shadow: 0 17px 27px rgba(0, 0, 0, 0.14)
-	ul
-		list-style: none
-		padding: 0
-		margin: 0
-		text-align: left
-		font-size: 0.9em
-		li
-			padding: 5px 15px
-			&:hover
-				background-color: #F8F8F8
-			a:hover
-				color: #000
-.drop-link:hover div.sub-menu
-	display: block
-	position: absolute
-	width: 160px
-	background-color: white
+/* navbar */
 
+.brand
+	padding-left: 20px
+	line-height: 70px
+	text-transform: uppercase
+	font-size: 1.4em
+.brand a img
+	max-height: 70px
+nav ul
+	list-style: none
+	margin: 0
+	padding: 0
+	display: flex
+nav ul li
+	position: relative
+nav ul li a,
+nav ul li a:visited
+	display: block
+	padding: 0 20px
+	line-height: 70px
+	color: black
+	text-decoration: none
+nav ul li a:hover,
+nav ul li a:visited:hover
+	background: #2ab1ce
+	color: #ffffff
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after
+	padding-left: 4px
+	content: ' ▾'
+nav ul li ul li
+	min-width: 190px
+nav ul li ul li a
+	padding: 15px
+	line-height: 20px
+.nav-dropdown
+	position: absolute
+	display: none
+	z-index: 1
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15)
+.nav-mobile
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	background: #262626
+	height: 70px
+	width: 70px
 .block-title
     h2
       width: 40%
@@ -218,7 +245,6 @@ input, select
 	height: 48px
 	background: #FFFFFF
 	border-width: 0
-	margin-right: 20px
 input[type="file"]
 	display: none
 input[type="checkbox"]
