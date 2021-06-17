@@ -24,34 +24,45 @@
 <body>
 
 <header>
-    <div class="container">
-        <nav class="head">
-            <div class="head-logo">
-                <img src="images/dist/head-logo.svg" alt="">
-            </div>
-            <div class="head-menu">
-                <ul class="head-menu-list">
-                    <li class="head-menu-list-item"><a href="#">Main</a></li>
-                    <li class="head-menu-list-item"><a href="#">About us</a></li>
-                    <li class="head-menu-list-item"><a href="#">Our office</a></li>
-                    <li class="head-menu-list-item"><a href="#">Benefits of working with STEX</a></li>
-                    <li class="head-menu-list-item"><a href="#">Career</a></li>
-                    <li class="head-menu-list-item"><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="head-lang">
-                <div class="dropdown">
-                    <div class="dropdown-btn">Eng</div>
-                    <div class="dropdown-content">
-                        <a href="#" class="dropdown-link">Rus</a>
-                        <a href="#" class="dropdown-link">Ukr</a>
-                        <a href="#" class="dropdown-link">Deu</a>
-                        <a href="#" class="dropdown-link">Eng</a>
+    <section class="nav-bar">
+        <div class="container">
+            <div class="head">
+                <div class="brand">
+                    <a href="#"><img src="images/dist/head-logo.svg" alt="logo"></a>
+                </div>
+                <nav class="head-menu">
+                    <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li><a href="#">Main</a></li>
+                        <li>
+                            <a href="#">About us</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#eu">STEX in Europe</a></li>
+                                <li><a href="#ua">STEX Ukraine</a></li>
+                                <li><a href="#lock">Our location</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#office">Our office</a></li>
+                        <li><a href="#benefit">Benefits of working with STEX</a></li>
+                        <li><a href="#career">Career</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="head-lang">
+                    <div class="dropdown">
+                        <div class="dropdown-btn">Eng</div>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-link">Rus</a>
+                            <a href="#" class="dropdown-link">Ukr</a>
+                            <a href="#" class="dropdown-link">Deu</a>
+                            <a href="#" class="dropdown-link">Eng</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
+
+        </div>
+    </section>
     <section class="bg">
         <div class="container">
             <div class="main">
@@ -70,7 +81,7 @@
 <section>
     <div class="container">
         <div class="adv">
-            <div class="adv-eu">
+            <div id="eu" class="adv-eu">
                 <div class="adv-desc">
                     <h2>STEX in Europe</h2>
                     <h3>We are proud to be one of the most trusted express logistics companies in Europe, offering
@@ -85,7 +96,7 @@
                     <img src="images/dist/advant-1.png" alt="">
                 </div>
             </div>
-            <div class="adv-ukr">
+            <div id="ua" class="adv-ukr">
                 <div class="adv-desc">
                     <h2>STEX Ukraine</h2>
                     <h3>As the volumes of STEX are expanding actively, we decided to launch a new company, STEX Ukraine
@@ -100,7 +111,7 @@
                     <img src="images/dist/advant-2.png" alt="">
                 </div>
             </div>
-            <div class="adv-lock">
+            <div id="lock" class="adv-lock">
                 <div class="adv-desc">
                     <h2>Our location</h2>
                     <h3>We have chosen the most beautiful, authentic and souled city to place the office of our company
@@ -119,7 +130,7 @@
     </div>
 </section>
 
-<section>
+<section id="office">
     <div class="container">
         <div class="office">
             <div class="block-title">
@@ -140,22 +151,22 @@
                     </div>
                 </div>
                 <div class="office-body-gallery">
-                    <a href="images/dist/officebig-1.png" class="lightzoom">
+                    <a href="images/dist/officebig-1.png" class="lightzoom" title="Chill out zone">
                         <img src="images/dist/office-1.png" alt="">
                     </a>
-                    <a href="images/dist/officebig-2.png" class="lightzoom">
+                    <a href="images/dist/officebig-2.png" class="lightzoom" title="Roof terrace for coffee brakes on a fresh air">
                         <img src="images/dist/office-2.png" alt="">
                     </a>
-                    <a href="images/dist/officebig-3.png" class="lightzoom">
+                    <a href="images/dist/officebig-3.png" class="lightzoom" title="our CEO, Valerie Barkova">
                         <img src="images/dist/office-3.png" alt="">
                     </a>
-                    <a href="images/dist/officebig-4.png" class="lightzoom">
+                    <a href="images/dist/officebig-4.png" class="lightzoom" title="the team of STEX Ukraine LLC">
                         <img src="images/dist/office-4.png" alt="">
                     </a>
-                    <a href="images/dist/officebig-5.png" class="lightzoom">
+                    <a href="images/dist/officebig-5.png" class="lightzoom" title="Kitchen area with free tea and coffee and a fridge with healthy meals on offer">
                         <img src="images/dist/office-5.png" alt="">
                     </a>
-                    <a href="images/dist/officebig-6.png" class="lightzoom">
+                    <a href="images/dist/officebig-6.png" class="lightzoom" title="Our bright office">
                         <img src="images/dist/office-6.png" alt="">
                     </a>
                 </div>
@@ -175,7 +186,7 @@
         </div>
     </div>
 </section>
-<section>
+<section id="benefit">
     <div class="container">
         <div class="benefits">
             <div class="block-title">
@@ -268,7 +279,7 @@
     </div>
 </section>
 
-<section>
+<section id="career">
     <div class="container">
         <div class="career">
             <div class="career-header">
@@ -284,16 +295,52 @@
                 <div class="career-header-right">
                     <h4>Check out our available jobs and see if there's something for you.</h4>
                     <div class="career-header-right-item">
-                        <a href="">
+                        <a href="#modal-1" class="popup-modal">
                             <span>Tracking manager</span>
                             <span>Full employment, Of. employment</span>
                         </a>
+                        <div id="modal-1" class="inline-popup mfp-hide">
+                            <div class="modal-title">
+                                Tracking manager
+                            </div>
+                            <div class="modal-body">
+                                <span>Requirements:</span>
+                                <p>3−5 years of professional experience writing for the blog and social media for hyper-relevant Saas, consumer tech, or B2B brands</p>
+                                <p> 1−2, years of experience with paid growth programs including Google, Linkedin ads, remarketing, and PPC campaigns.</p>
+                                <p> Intellectually curious — eager to grapple with an undefined software category and helping establish Intempt as a thought leader in the customer data tech space</p>
+                                <p> Deep and up-to-date understanding of SEO best practices and technical instrumentation</p>
+                                <p> Proactive & independent, always looking for ways to take initiative and improve existing programs/processes</p>
+                                <p>  Must be a collaborative, cross-functional team player and comfortable working at an early-stage startup pace Eye for user flow & visual design </p>
+                                <p> Must exhibit strong verbal and written communication skills with a high degree of comfort interpreting results and communicating insights effectively to the team </p>
+                                <p> Passion for CRM, A/B testing, and user engagement</p>
+                                <p> Self-starter — motivated to find solutions, propose ideas, and always optimize</p>
+                                <button class="button">Contact Us</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="career-header-right-item">
-                        <a href="">
+                        <a href="#modal-2" class="popup-modal">
                             <span>German speaking office manager</span>
                             <span>Full employment, Of. employment</span>
                         </a>
+                        <div id="modal-2" class="inline-popup mfp-hide">
+                            <div class="modal-title">
+                                Tracking manager
+                            </div>
+                            <div class="modal-body">
+                                <span>Requirements:</span>
+                                <p>3−5 years of professional experience writing for the blog and social media for hyper-relevant Saas, consumer tech, or B2B brands</p>
+                                <p> 1−2, years of experience with paid growth programs including Google, Linkedin ads, remarketing, and PPC campaigns.</p>
+                                <p> Intellectually curious — eager to grapple with an undefined software category and helping establish Intempt as a thought leader in the customer data tech space</p>
+                                <p> Deep and up-to-date understanding of SEO best practices and technical instrumentation</p>
+                                <p> Proactive & independent, always looking for ways to take initiative and improve existing programs/processes</p>
+                                <p>  Must be a collaborative, cross-functional team player and comfortable working at an early-stage startup pace Eye for user flow & visual design </p>
+                                <p> Must exhibit strong verbal and written communication skills with a high degree of comfort interpreting results and communicating insights effectively to the team </p>
+                                <p> Passion for CRM, A/B testing, and user engagement</p>
+                                <p> Self-starter — motivated to find solutions, propose ideas, and always optimize</p>
+                                <button class="button">Contact Us</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -342,12 +389,12 @@
                                 <input type="text">
                             </div>
                             <div class="form-group-item">
-                                <label for="">Address: *</label>
+                                <label for="">State: *</label>
                                 <input type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="form-group-item" style="width: 80%;">
+                            <div class="form-group-item-max">
                                 <label for="">Nationality *</label>
                                 <input type="text">
                             </div>
@@ -415,7 +462,7 @@
         </div>
     </div>
 </section>
-<section>
+<section id="contact">
     <div class="container">
         <div class="contact">
             <div class="contact-img">
